@@ -50,7 +50,7 @@ namespace Desafio_vendas
                 PrecoTotal = precoProduto * quantidade
             };
             _venda.ItemVendas.Add(itemVenda);
-            listBoxVendas.Items.Add($"{itemVenda.NomeProduto} - {itemVenda.Quantidade} - R$ {itemVenda.PrecoTotal}");
+            listBoxVendas.Items.Add($" {itemVenda.NomeProduto} - {itemVenda.Quantidade} -  R$ {itemVenda.PrecoTotal}");
             textBoxValorVenda.Text = $"R$ {_venda.ValorTotalVenda}";
             MessageBox.Show("Item adicionado a venda");
         }

@@ -43,17 +43,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbEstado = new System.Windows.Forms.TextBox();
             this.dgCadastroClientes = new System.Windows.Forms.DataGridView();
-            this.db_VendaDataSet = new Desafio_vendas.db_VendaDataSet();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clienteTableAdapter = new Desafio_vendas.db_VendaDataSetTableAdapters.clienteTableAdapter();
             this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.db_VendaDataSet = new Desafio_vendas.db_VendaDataSet();
+            this.clienteTableAdapter = new Desafio_vendas.db_VendaDataSetTableAdapters.clienteTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgCadastroClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_VendaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_VendaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxCpf
@@ -61,20 +61,20 @@
             this.textBoxCpf.Location = new System.Drawing.Point(65, 146);
             this.textBoxCpf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxCpf.Name = "textBoxCpf";
-            this.textBoxCpf.Size = new System.Drawing.Size(233, 27);
+            this.textBoxCpf.Size = new System.Drawing.Size(212, 27);
             this.textBoxCpf.TabIndex = 1;
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(463, 74);
+            this.textBoxNome.Location = new System.Drawing.Point(82, 75);
             this.textBoxNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(206, 27);
+            this.textBoxNome.Size = new System.Drawing.Size(195, 27);
             this.textBoxNome.TabIndex = 2;
             // 
             // textBoxTelefone
             // 
-            this.textBoxTelefone.Location = new System.Drawing.Point(463, 142);
+            this.textBoxTelefone.Location = new System.Drawing.Point(458, 133);
             this.textBoxTelefone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxTelefone.Name = "textBoxTelefone";
             this.textBoxTelefone.Size = new System.Drawing.Size(206, 27);
@@ -83,10 +83,10 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(82, 69);
+            this.textBoxEmail.Location = new System.Drawing.Point(458, 79);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(216, 27);
+            this.textBoxEmail.Size = new System.Drawing.Size(206, 27);
             this.textBoxEmail.TabIndex = 4;
             // 
             // label2
@@ -104,7 +104,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(366, 73);
+            this.label3.Location = new System.Drawing.Point(13, 74);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 28);
@@ -115,7 +115,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(366, 141);
+            this.label4.Location = new System.Drawing.Point(349, 128);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 28);
@@ -126,7 +126,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 69);
+            this.label5.Location = new System.Drawing.Point(349, 74);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 28);
@@ -161,7 +161,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Sitka Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(366, 216);
+            this.label7.Location = new System.Drawing.Point(349, 201);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 28);
@@ -170,7 +170,7 @@
             // 
             // tbEstado
             // 
-            this.tbEstado.Location = new System.Drawing.Point(463, 217);
+            this.tbEstado.Location = new System.Drawing.Point(458, 206);
             this.tbEstado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbEstado.Name = "tbEstado";
             this.tbEstado.Size = new System.Drawing.Size(206, 27);
@@ -196,6 +196,7 @@
             this.telefoneDataGridViewTextBoxColumn,
             this.estadoDataGridViewTextBoxColumn});
             this.dgCadastroClientes.DataSource = this.clienteBindingSource;
+            this.dgCadastroClientes.Enabled = false;
             this.dgCadastroClientes.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dgCadastroClientes.Location = new System.Drawing.Point(3, 273);
             this.dgCadastroClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -203,20 +204,6 @@
             this.dgCadastroClientes.Size = new System.Drawing.Size(714, 222);
             this.dgCadastroClientes.TabIndex = 17;
             this.dgCadastroClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCadastroClientes_CellContentClick);
-            // 
-            // db_VendaDataSet
-            // 
-            this.db_VendaDataSet.DataSetName = "db_VendaDataSet";
-            this.db_VendaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "cliente";
-            this.clienteBindingSource.DataSource = this.db_VendaDataSet;
-            // 
-            // clienteTableAdapter
-            // 
-            this.clienteTableAdapter.ClearBeforeFill = true;
             // 
             // idClienteDataGridViewTextBoxColumn
             // 
@@ -252,6 +239,20 @@
             this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
             this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
             // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "cliente";
+            this.clienteBindingSource.DataSource = this.db_VendaDataSet;
+            // 
+            // db_VendaDataSet
+            // 
+            this.db_VendaDataSet.DataSetName = "db_VendaDataSet";
+            this.db_VendaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
             // FormCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -279,8 +280,8 @@
             this.Text = "FormCadastroClientes";
             this.Load += new System.EventHandler(this.FormCadastroClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgCadastroClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_VendaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_VendaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

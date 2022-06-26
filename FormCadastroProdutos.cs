@@ -26,7 +26,28 @@ namespace Desafio_vendas
 
         private void btCadastrarProdutos_Click(object sender, EventArgs e)
         {
+            Produto c = new Produto
+            {
+                CodEAN = tbCodEan.Text,
+                Nome = tbNomeProduto.Text,
+                Preco = tbPreco.Text,
+                Estoque = tbEstoque.Text,
+                Marca = tbMarca.Text
+            };
+            bool ok = c.gravarProduto();
+            if (ok)
+            {
+                MessageBox.Show("Produto cadastrado com sucesso");
+                // TODO: esta linha de código carrega dados na tabela 'db_VendaDataSet1.produto'. Você pode movê-la ou removê-la conforme necessário.
+                this.produtoTableAdapter.Fill(this.db_VendaDataSet1.produto);
+                tbCodEan.Clear();
+                tbNomeProduto.Clear();
+                tbPreco.Clear();
+                tbEstoque.Clear();
+                tbMarca.Clear();
 
+            }
+         
         }
     }
 }

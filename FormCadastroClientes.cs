@@ -42,13 +42,13 @@ namespace Desafio_vendas
             bool ok =  c.gravarPessoa();
             if (ok)
             {
-                MessageBox.Show("Ok");
+                MessageBox.Show("Cliente cadastrado com sucesso");
                 this.clienteTableAdapter.Fill(this.db_VendaDataSet.cliente);
 
             }
             else
             {
-                MessageBox.Show("Nao Ok");
+                
             }
         }
 

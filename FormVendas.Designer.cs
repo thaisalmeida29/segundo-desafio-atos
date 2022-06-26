@@ -170,7 +170,7 @@
             // 
             // buttonEfetuarVenda
             // 
-            this.buttonEfetuarVenda.Location = new System.Drawing.Point(324, 219);
+            this.buttonEfetuarVenda.Location = new System.Drawing.Point(245, 219);
             this.buttonEfetuarVenda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonEfetuarVenda.Name = "buttonEfetuarVenda";
             this.buttonEfetuarVenda.Size = new System.Drawing.Size(132, 32);
@@ -189,16 +189,18 @@
             // 
             // listBoxVendas
             // 
+            this.listBoxVendas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.listBoxVendas.Enabled = false;
             this.listBoxVendas.FormattingEnabled = true;
             this.listBoxVendas.ItemHeight = 20;
-            this.listBoxVendas.Location = new System.Drawing.Point(17, 293);
+            this.listBoxVendas.Location = new System.Drawing.Point(3, 293);
             this.listBoxVendas.Name = "listBoxVendas";
-            this.listBoxVendas.Size = new System.Drawing.Size(722, 184);
+            this.listBoxVendas.Size = new System.Drawing.Size(710, 184);
             this.listBoxVendas.TabIndex = 23;
             // 
             // textBoxValorVenda
             // 
-            this.textBoxValorVenda.Location = new System.Drawing.Point(578, 31);
+            this.textBoxValorVenda.Location = new System.Drawing.Point(564, 6);
             this.textBoxValorVenda.Name = "textBoxValorVenda";
             this.textBoxValorVenda.Size = new System.Drawing.Size(135, 27);
             this.textBoxValorVenda.TabIndex = 24;
@@ -206,7 +208,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(478, 34);
+            this.label5.Location = new System.Drawing.Point(473, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 20);
             this.label5.TabIndex = 25;
@@ -217,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(751, 495);
+            this.ClientSize = new System.Drawing.Size(717, 495);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxValorVenda);
             this.Controls.Add(this.listBoxVendas);
