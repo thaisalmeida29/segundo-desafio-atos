@@ -36,11 +36,15 @@ CREATE TABLE itemVenda(
 	idProduto INT NOT NULL,
 	idVenda INT NOT NULL,
 	quantidade INT NOT NULL,
+	valorUnitario decimal(15,2) NOT NULL,
 	valorTotal decimal(15,2) NOT NULL,
 	PRIMARY KEY (idItemVenda),
 	CONSTRAINT fk_Produto FOREIGN KEY (idProduto) REFERENCES produto (idProduto),
 	CONSTRAINT fk_Venda FOREIGN KEY (idVenda) REFERENCES venda (idVenda)
 );
+
+--update produto set estoque = 100 where idProduto = 104
+--select * from produto
 
 
 -- Geração de dados com https://www.mockaroo.com/

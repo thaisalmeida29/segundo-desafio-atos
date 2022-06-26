@@ -42,19 +42,30 @@ namespace Desafio_vendas
 
                 foreach (ItemVenda itemVenda  in ItemVendas)
                 {
-                    command.CommandText = "insert into itemVenda values (@idProduto, @idVenda, @quantidade, @valorTotal);";
+                    command.CommandText = "insert into itemVenda values (@idProduto, @idVenda, @quantidade, @valorUnitario, @valorTotal);";
                     command.Parameters.Add("@idProduto", SqlDbType.Int);
                     command.Parameters.Add("@idVenda", SqlDbType.Int);
                     command.Parameters.Add("@quantidade", SqlDbType.Int);
+                    command.Parameters.Add("@valorUnitario", SqlDbType.Decimal);
                     command.Parameters.Add("@valorTotal", SqlDbType.Decimal);
 
                     command.Parameters[0].Value = itemVenda.IdProduto;
                     command.Parameters[1].Value = idVenda;
                     command.Parameters[2].Value = itemVenda.Quantidade;
-                    command.Parameters[3].Value = itemVenda.PrecoTotal;
+                    command.Parameters[3].Value = itemVenda.PrecoUnitario;
+                    command.Parameters[4].Value = itemVenda.PrecoTotal;
+                    command.ExecuteNonQuery();
+                    command.Parameters.Clear();
+                   
+                    command.CommandText = "update produto set estoque -= @quantidade where idProduto = @idProduto;";
+                    command.Parameters.Add("@quantidade", SqlDbType.Int);
+                    command.Parameters.Add("@idProduto", SqlDbType.Int);
+                    command.Parameters[0].Value = itemVenda.Quantidade;
+                    command.Parameters[1].Value = itemVenda.IdProduto;
                     command.ExecuteNonQuery();
                     command.Parameters.Clear();
                 }
+
                 tran.Commit();
                 return true;
             }
@@ -77,6 +88,8 @@ namespace Desafio_vendas
         public string NomeProduto { get; set; }
 
         public int Quantidade { get; set; }
+
+        public decimal PrecoUnitario { get; set; }
 
         public decimal PrecoTotal { get; set; }
     }
