@@ -17,6 +17,10 @@ namespace Desafio_vendas
 
         public string Marca { get; set; }
 
+        /// <summary>
+        /// método para gravar produto no banco de dados
+        /// </summary>
+        /// <returns></returns>
         public bool gravarProduto()
         {
             Banco banco = new Banco();

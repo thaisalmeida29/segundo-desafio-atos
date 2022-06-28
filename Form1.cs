@@ -82,5 +82,10 @@ namespace Desafio_vendas
         {
             ActiveFormClose();
         }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

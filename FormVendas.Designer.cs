@@ -86,7 +86,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(320, 9);
+            this.label1.Location = new System.Drawing.Point(283, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 15;
@@ -200,6 +200,7 @@
             // 
             // textBoxValorVenda
             // 
+            this.textBoxValorVenda.Enabled = false;
             this.textBoxValorVenda.Location = new System.Drawing.Point(564, 6);
             this.textBoxValorVenda.Name = "textBoxValorVenda";
             this.textBoxValorVenda.Size = new System.Drawing.Size(135, 27);

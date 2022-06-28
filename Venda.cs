@@ -18,7 +18,10 @@ namespace Desafio_vendas
 
         public decimal ValorTotalVenda => ItemVendas.Sum(i => i.PrecoTotal);
 
-
+        /// <summary>
+        /// método para gravar a venda do usuario
+        /// </summary>
+        /// <returns></returns>
         public bool gravarVenda()
         {
             Banco banco = new Banco();

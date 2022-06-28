@@ -28,7 +28,11 @@ namespace Desafio_vendas
             this.clienteTableAdapter.Fill(this.db_VendaDataSet.cliente);
 
         }
-
+        /// <summary>
+        /// click do botao para cadastrar os clientes no banco de dados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCadastrar_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente
@@ -39,18 +43,32 @@ namespace Desafio_vendas
                 Nome = textBoxNome.Text,
                 Telefone = textBoxTelefone.Text
             };
-            bool ok =  c.gravarPessoa();
-            if (ok)
+            if (String.IsNullOrEmpty(textBoxNome.Text))
             {
-                MessageBox.Show("Cliente cadastrado com sucesso");
-                this.clienteTableAdapter.Fill(this.db_VendaDataSet.cliente);
-
+                MessageBox.Show("Preenchimento obrigatorio");
             }
             else
             {
-                
+                bool ok = c.gravarPessoa();
+                if (ok) // testa se conseguiu gravar um cliente
+                {
+                    MessageBox.Show("Cliente cadastrado com sucesso");
+                    this.clienteTableAdapter.Fill(this.db_VendaDataSet.cliente);
+                    textBoxCpf.Clear();
+                    textBoxNome.Clear();
+                    tbEstado.Clear();
+                    textBoxTelefone.Clear();
+                    textBoxEmail.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Cliente não cadastrado");
+                }
             }
         }
+
+
+
 
         private void dgCadastroClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

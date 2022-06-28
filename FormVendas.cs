@@ -29,22 +29,27 @@ namespace Desafio_vendas
             comboBoxProduto.Text = "Selecione";
             comboBoxCliente.SelectedItem = null;
             comboBoxCliente.Text = "Selecione";
-            
-        }
 
+        }
+        /// <summary>
+        /// click do botão de cadastrar as vendas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCadastrarVendas_Click(object sender, EventArgs e)
         {
-           if(comboBoxProduto.SelectedValue == null)
-           {
+            if (comboBoxProduto.SelectedValue == null)  //testa se o combobox de produto está nulo
+            {
                 MessageBox.Show("Selecione um produto");
                 return;
             }
 
-            if (comboBoxCliente.SelectedValue == null)
+            if (comboBoxCliente.SelectedValue == null) //testa se o combobox de cliente está nulo
             {
                 MessageBox.Show("Selecione um cliente");
                 return;
             }
+
             int idProduto = Convert.ToInt32(comboBoxProduto.SelectedValue);
             string nomeProduto = comboBoxProduto.GetItemText(comboBoxProduto.SelectedItem);
             int quantidade = Convert.ToInt32(textBoxQuantidade.Text);
@@ -52,13 +57,13 @@ namespace Desafio_vendas
             decimal precoProduto = (decimal)(oDataRowView.Row["preco"]);
             int estoque = (int)(oDataRowView.Row["estoque"]);
 
-            if(quantidade == 0)
+            if (quantidade == 0)  // testa se a quantidade é igual a 0
             {
                 MessageBox.Show("Quantidade de produtos inválida");
                 return;
             }
 
-            if(quantidade > estoque)
+            if (quantidade > estoque) // testa se a quantidade é maior que o estoque
             {
                 MessageBox.Show("Quantidade de items acima do estoque!");
                 return;
@@ -89,19 +94,26 @@ namespace Desafio_vendas
             MessageBox.Show("Item adicionado a venda");
             comboBoxCliente.Enabled = false;
         }
-
+        /// <summary>
+        /// método que atualiza o listbox de vendas
+        /// </summary>
         private void RefreshListBox()
         {
-            listBoxVendas.Items.Clear();
-            foreach(var itemVenda in _venda.ItemVendas)
+            listBoxVendas.Items.Clear(); // limpa o listbox de vendas
+            foreach (var itemVenda in _venda.ItemVendas)
             {
                 listBoxVendas.Items.Add($" Nome do Produto: {itemVenda.NomeProduto} - Quantidade: {itemVenda.Quantidade} - Preço Unitário: R$ {itemVenda.PrecoUnitario} - Valor Total:  R$ {itemVenda.PrecoTotal}");
             }
         }
+        /// <summary>
+        /// click do botão de efetuar as vendas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void buttonEfetuarVenda_Click(object sender, EventArgs e)
         {
-            if(_venda.ItemVendas.Count == 0)
+            if (_venda.ItemVendas.Count == 0) //testa se a quantidade de item venda é igual a 0
             {
                 MessageBox.Show("Voce precisa adicionar pelo um produto");
                 return;
@@ -111,7 +123,7 @@ namespace Desafio_vendas
             _venda.IdCliente = idCliente;
             _venda.NomeCliente = nomeCliente;
             bool sucesso = _venda.gravarVenda();
-            if(sucesso)
+            if (sucesso)
             {
                 MessageBox.Show("Venda efetuada com sucesso");
                 this.RefreshForm();
@@ -121,7 +133,9 @@ namespace Desafio_vendas
                 MessageBox.Show("Ocorreu algum problema na efetuação da venda");
             }
         }
-
+        /// <summary>
+        /// método que atualiza o formulário de vendas
+        /// </summary>
         public void RefreshForm()
         {
             this.Controls.Clear();
@@ -134,6 +148,8 @@ namespace Desafio_vendas
             comboBoxProduto.Text = "Selecione";
             comboBoxCliente.Text = "Selecione";
             comboBoxCliente.SelectedItem = null;
+           
+
         }
     }
 }

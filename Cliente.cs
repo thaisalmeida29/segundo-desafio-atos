@@ -16,7 +16,10 @@ namespace Desafio_vendas
         public string Estado { get; set; }
 
         public string Cpf { get; set; }
-
+        /// <summary>
+        /// método para gravar um cliente no banco de dados
+        /// </summary>
+        /// <returns></returns>
         public bool gravarPessoa()
         {
             Banco banco = new Banco();
