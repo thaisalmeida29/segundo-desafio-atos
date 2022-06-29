@@ -24,8 +24,12 @@ namespace Desafio_vendas
 
         private void FormCadastroClientes_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'db_VendaDataSet.cliente'. Você pode movê-la ou removê-la conforme necessário.
-            this.clienteTableAdapter.Fill(this.db_VendaDataSet.cliente);
+            // TODO: esta linha de código carrega dados na tabela 'db_VendaDataSet11.cliente'. Você pode movê-la ou removê-la conforme necessário.
+            this.clienteTableAdapter6.Fill(this.db_VendaDataSet11.cliente);
+       
+
+
+
 
         }
         /// <summary>
@@ -37,11 +41,11 @@ namespace Desafio_vendas
         {
             Cliente c = new Cliente
             {
-                Cpf = textBoxCpf.Text,
                 Email = textBoxEmail.Text,
                 Estado = tbEstado.Text,
                 Nome = textBoxNome.Text,
-                Telefone = textBoxTelefone.Text
+                Telefone = textBoxTelefone.Text,
+                Cpf = textBoxCpf.Text
             };
             if (String.IsNullOrEmpty(textBoxNome.Text))
             {
@@ -53,7 +57,8 @@ namespace Desafio_vendas
                 if (ok) // testa se conseguiu gravar um cliente
                 {
                     MessageBox.Show("Cliente cadastrado com sucesso");
-                    this.clienteTableAdapter.Fill(this.db_VendaDataSet.cliente);
+                   
+                    this.clienteTableAdapter6.Fill(this.db_VendaDataSet11.cliente);
                     textBoxCpf.Clear();
                     textBoxNome.Clear();
                     tbEstado.Clear();
@@ -72,6 +77,19 @@ namespace Desafio_vendas
 
         private void dgCadastroClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.clienteTableAdapter6.Fill(this.db_VendaDataSet11.cliente);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }

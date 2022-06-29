@@ -50,6 +50,7 @@
             this.listBoxVendas = new System.Windows.Forms.ListBox();
             this.textBoxValorVenda = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.clienteTableAdapter1 = new Desafio_vendas.db_VendaDataSet9TableAdapters.clienteTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.db_VendaDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
@@ -215,6 +216,10 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "Valor Total:";
             // 
+            // clienteTableAdapter1
+            // 
+            this.clienteTableAdapter1.ClearBeforeFill = true;
+            // 
             // FormVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -272,5 +277,6 @@
         private System.Windows.Forms.ListBox listBoxVendas;
         private System.Windows.Forms.TextBox textBoxValorVenda;
         private System.Windows.Forms.Label label5;
+        private db_VendaDataSet9TableAdapters.clienteTableAdapter clienteTableAdapter1;
     }
 }

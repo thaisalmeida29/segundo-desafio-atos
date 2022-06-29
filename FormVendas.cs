@@ -21,6 +21,8 @@ namespace Desafio_vendas
 
         private void FormVendas_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'db_VendaDataSet9.cliente'. Você pode movê-la ou removê-la conforme necessário.
+       
             this.produtoTableAdapter.Fill(this.db_VendaDataSet4.produto);
             this.clienteTableAdapter.Fill(this.db_VendaDataSet3.cliente);
             this.vendaTableAdapter.Fill(this.db_VendaDataSet2.venda);
