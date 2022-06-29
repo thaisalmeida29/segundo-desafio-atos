@@ -14,8 +14,7 @@ fazer um sistema de vendas usando Windows Forms e Banco de dados.
 
 Aqui um breve gif de como funciona o sistema.
 
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/96269299/176547549-1f627dd2-6746-4220-971b-70ffc926739b.gif)
-
+![2022-06-29-18-18-55](https://user-images.githubusercontent.com/96269299/176553056-71224986-b7ff-4ef4-a949-ba9d6a5a0efc.gif)
 
 ## :wrench: Tecnologias usadas
 
